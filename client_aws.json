@@ -1,0 +1,166 @@
+{
+ "client": "totalrx",
+ "generated_at": "2026-09-14T14:50:25-05:00",
+ "generated_at_ct": "2:50pm",
+ "window": {
+  "start": "2026-09-07",
+  "end": "2026-09-13"
+ },
+ "sl_secs": 30,
+ "today_mdk": "9/14",
+ "today_iso": "2026-09-14",
+ "source": "amazon-connect-api",
+ "attribution": {
+  "basis": "queue",
+  "queues": [
+   "TotalRX Chat"
+  ],
+  "callback_queues": [],
+  "note": "Queue-filtered, not client-exact. For Embody the live queue holds 98.7% of the client's queued contacts; the remainder sits in PETE and RN Support, and the queue carries a little other-client traffic. Exact attribution needs per-contact LineOfBusiness enumeration, which does not fit a 5-minute timer."
+ },
+ "excluded": {
+  "abandonment": "stays on Zoho \u2014 it is patient-level and a Connect contact has no patient identifier, only the caller's phone number",
+  "email": "Connect has no email channel"
+ },
+ "voice": {
+  "days": {},
+  "today": {
+   "offered": 0,
+   "answered": 0,
+   "offered_live": 0,
+   "answered_live": 0,
+   "answered_in_sl": 0,
+   "short_abandoned": 0,
+   "sl_den": 0,
+   "sl": null,
+   "sl_answered_only": null,
+   "asa_s": null,
+   "aht_s": null
+  }
+ },
+ "chat_informational": {
+  "days": {
+   "2026-09-07": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 1,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 0,
+    "sl_den": 1,
+    "sl_secs": 30,
+    "sl": 0.0,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   },
+   "2026-09-08": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 3,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 0,
+    "sl_den": 3,
+    "sl_secs": 30,
+    "sl": 0.0,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   },
+   "2026-09-09": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 7,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 0,
+    "sl_den": 7,
+    "sl_secs": 30,
+    "sl": 0.0,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   },
+   "2026-09-10": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 4,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 0,
+    "sl_den": 4,
+    "sl_secs": 30,
+    "sl": 0.0,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   },
+   "2026-09-11": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 5,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 1,
+    "sl_den": 4,
+    "sl_secs": 30,
+    "sl": 0.0,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   },
+   "2026-09-12": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 1,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 0,
+    "sl_den": 1,
+    "sl_secs": 30,
+    "sl": 0.0,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   },
+   "2026-09-13": {
+    "offered": 0,
+    "answered": 0,
+    "offered_live": 0,
+    "answered_live": 0,
+    "answered_in_sl": 0,
+    "short_abandoned": 0,
+    "sl_den": 0,
+    "sl_secs": 30,
+    "sl": null,
+    "asa_s": null,
+    "aht_s": null,
+    "hours_ct": "06:00-18:59"
+   }
+  },
+  "today": {
+   "offered": 0,
+   "answered": 0,
+   "offered_live": 1,
+   "answered_live": 0,
+   "answered_in_sl": 0,
+   "short_abandoned": 0,
+   "sl_den": 1,
+   "sl_secs": 30,
+   "sl": 0.0,
+   "asa_s": null,
+   "aht_s": null,
+   "hours_ct": "06:00-18:59"
+  },
+  "hours_ct": "06:00-18:59 CT",
+  "caveat": "business-hours window only; does NOT exclude chats answered the next day, so SL/ASA here are not comparable to the dashboard's Zoho-sourced chat figures"
+ },
+ "email_live": {
+  "rec": null,
+  "clo": null,
+  "asof_ct": "2:44pm"
+ },
+ "errors": [],
+ "ok": true
+}

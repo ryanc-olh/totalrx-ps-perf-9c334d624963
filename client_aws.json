@@ -1,7 +1,7 @@
 {
  "client": "totalrx",
- "generated_at": "2026-09-14T14:50:25-05:00",
- "generated_at_ct": "2:50pm",
+ "generated_at": "2026-09-14T15:12:20-05:00",
+ "generated_at_ct": "3:12pm",
  "window": {
   "start": "2026-09-07",
   "end": "2026-09-13"
@@ -159,7 +159,7 @@
  "email_live": {
   "rec": null,
   "clo": null,
-  "asof_ct": "2:44pm"
+  "asof_ct": "3:04pm"
  },
  "errors": [],
  "ok": true

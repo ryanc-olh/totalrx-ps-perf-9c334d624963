@@ -54,7 +54,7 @@
 <body>
 <div class="wrap">
   <h1>TotalRX — Patient Support Performance</h1>
-  <div class="sub">Sep 7–13, 2026 · Voice · Email · Chat · TotalRX · Central Time · <b id="hdrStamp">updated 2:53pm CDT</b></div>
+  <div class="sub">Sep 7–13, 2026 · Voice · Email · TotalRX · Central Time · <b id="hdrStamp">updated 3:36pm CDT</b></div>
   
   <div id="pane-sum">
 
@@ -63,7 +63,7 @@
     <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">3</div><div class="n" id="tvVn">as of ~10:30a CT</div></div>
     <div class="card"><div class="k">Email — received</div><div class="v" id="keREC">3</div><div class="n" id="keLat">as of ~12p CT</div></div>
     <div class="card"><div class="k">Email — open backlog</div><div class="v">77</div><div class="n">as of ~12p CT</div></div>
-    <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">0</div><div class="n" id="tvCn">as of ~10:30a CT</div></div>
+    
   </div>
 
   <!-- id so the live patcher refreshes this. It is a BUILD-TIME substitution, so while the tile above
@@ -145,34 +145,6 @@
   <div class="note">* partial day — email to <span class="eLat">~12p CT</span></div>
 
   
-  <div class="sec">Chat <span style="font-weight:400;color:var(--mut);font-size:12px;" id="cStamp">· updated through ~10:30a CT</span></div>
-  
-  <div class="grid kpis">
-    <div class="card"><div class="k">Answered ≤30s</div><div class="v " id="kcSL">—</div><div class="n">Mon Sep 14 so far · Target 80%</div></div>
-    <div class="card"><div class="k">Avg Speed of Answer</div><div class="v" id="kcASA">—</div><div class="n">Mon Sep 14 so far</div></div>
-    <div class="card"><div class="k">Inbound Volume</div><div class="v" id="kcVOL">—</div><div class="n">Mon Sep 14 so far</div></div>
-  </div>
-  <div class="lbl">By Day</div>
-  <table>
-    <thead><tr><th>Day</th><th>Inbound Volume</th><th>% Answered ≤30s</th><th>Avg Speed of Answer</th></tr></thead>
-    <tbody>
-      <tr class="ghost"><td>Mon 8/31</td><td>1</td><td>0%</td><td>0.0m</td></tr>
-      <tr class="ghost"><td>Tue 9/1</td><td>2</td><td>0%</td><td>0.0m</td></tr>
-      <tr class="ghost"><td>Wed 9/2</td><td>1</td><td>0%</td><td>0.0m</td></tr>
-      <tr class="ghost"><td>Fri 9/4</td><td>1</td><td>0%</td><td>0.0m</td></tr>
-      <tr class="tot ghost"><td>Aug 31–Sep 6</td><td>5</td><td>0%</td><td>~0.0m</td></tr>
-      <tr class="wkdiv"><td>Mon 9/7</td><td>4</td><td class="red">0%</td><td>0.0m</td></tr>
-      <tr><td>Tue 9/8</td><td>7</td><td class="red">0%</td><td>0.0m</td></tr>
-      <tr><td>Wed 9/9</td><td>4</td><td class="red">0%</td><td>0.0m</td></tr>
-      <tr><td>Thu 9/10</td><td>4</td><td class="red">0%</td><td>0.0m</td></tr>
-      <tr><td>Fri 9/11</td><td>2</td><td class="amb">50%</td><td>0.0m</td></tr>
-      <tr><td>Sun 9/13</td><td>1</td><td class="red">0%</td><td>0.0m</td></tr>
-      <tr class="tot"><td>Sep 7–13</td><td>22</td><td class="red">5%</td><td>~0.0m</td></tr>
-      <tr class="amb" id="cTodayRow"><td>Mon 9/14*</td><td>0</td><td>&mdash;</td><td>&mdash;</td></tr>
-    </tbody>
-  </table>
-  <div class="note">* partial day — feed to ~10:30a CT</div>
-  
 
   <div class="sec">Intraday by Hour</div>
   <div class="picker">
@@ -196,7 +168,7 @@
       <div class="leg"><span><span class="sw" style="background:#2a78d6;"></span>Received</span><span><span class="sw" style="background:#1baf7a;"></span>Resolved</span></div>
       <div class="cbox"><canvas id="ce"></canvas></div>
     </div>
-    <div><div class="lbl" style="margin-top:0;">Chat — Inbound Volume by Hour</div><div class="cbox"><canvas id="cx"></canvas></div></div>
+    
   </div>
   </div><!--/pane-sum-->
   
@@ -229,11 +201,6 @@
       <li><b>Open backlog</b> &mdash; tickets still open at the end of the window.</li>
     </ul>
 
-    <div class="mh">Chat</div>
-    <ul>
-      <li><b>Inbound Volume</b> &mdash; chat sessions that reached a queue, counting only chats <b>arriving 6am&ndash;7pm CT</b>. <b>% Answered &le;30s</b> &mdash; same service-level measure as voice (left the queue &le;30s, answered or disconnected); chats not answered the same day are excluded from SL and speed-of-answer but still count as volume.</li>
-    </ul>
-
     <div class="mh">Satisfaction</div>
     <ul>
       <li><b>Satisfaction scores</b> &mdash; post-call surveys on a 1&ndash;5 scale; &ldquo;% 4&ndash;5&rdquo; is the share rating 4 or 5 (satisfied).</li>
@@ -258,7 +225,7 @@
   window.C2=new Chart(document.getElementById('c2'),{type:'line',data:{labels:days7,datasets:[{label:'SLA %',data:[100,80,100,100,100,0,100,100,100,100,100,60,100,100,67],borderColor:'#2a78d6',backgroundColor:'#2a78d6',borderWidth:2,tension:0.25,pointRadius:3,pointBackgroundColor:wkBlue,pointBorderColor:wkBlue},{label:'Target 80%',data:days7.map(function(){return 80;}),borderColor:'#e34948',borderWidth:1.5,borderDash:[6,4],pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:bx,y:{min:0,max:110,grid:{color:grid},ticks:{stepSize:20,color:mut,font:{size:11},callback:function(v){return v>100?'':v+'%';}}}}}});
   var Z=function(){return [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];};
   var VOFF={'9/7':[0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/8':[0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,2,0,1,0,0,0,0,0,0],'9/9':[0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0],'9/10':[0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,0,0,0,0,0,0,0],'9/11':[0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,1,0,0],'9/12':[0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],'9/13':[0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,2,0,0,0,0,0,0,0,0],'9/14':[0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0]};
-  var CHOFF={'9/7':[0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],'9/8':[0,0,0,0,0,1,0,0,0,0,0,0,0,2,2,1,2,0,0,0,0,0,0,0],'9/9':[0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0],'9/10':[0,1,0,0,1,0,0,1,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0],'9/11':[0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1],'9/12':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/13':[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],'9/14':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
+  var CHOFF={};
   var EREC={'9/7':[0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],'9/8':[0,0,0,1,0,0,0,0,2,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0],'9/9':[0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0],'9/10':[0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0],'9/11':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0],'9/12':[0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0],'9/13':[0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,1,1,0,0,0,0,0,0],'9/14':[0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0]};
   var ECLO={'9/7':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/8':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/9':[0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/10':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/11':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/12':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/13':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],'9/14':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
   var hrs=[]; for(var h=0;h<24;h++){hrs.push((h%12===0?12:h%12)+(h<12?'a':'p'));}
